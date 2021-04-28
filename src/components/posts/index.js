@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import PostCard from "./post-card";
 import { getPost } from "../utils/airtable";
 import { Card } from "semantic-ui-react";
+import Table from "./table";
 
 export default function Post() {
   const [post, setPost] = useState([]);
@@ -13,12 +14,17 @@ export default function Post() {
   }, []);
   return (
     <div>
-      <section className='content-container'>
-        <Card.Group>
+      <section className="content-container">
+          <section style={{margin:'auto'}}>
+          <Card.Group>
           {post.map((post) => (
             <PostCard post={post} />
           ))}
         </Card.Group>
+          </section>
+        <div style={{marginTop: '10vh'}}>
+        <Table />
+        </div>
       </section>
     </div>
   );
