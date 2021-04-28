@@ -1,0 +1,29 @@
+.post-container {
+    width: 50vw;
+    height: 30vh;
+    box-shadow: 10px 10px 47px -6px rgba(0, 0, 0, 0.75);
+    border-radius: 30px;
+    margin-top: 10%;
+
+}
+
+.post-container div {
+    display: flex;
+}
+
+.post-image-container img {
+    width: 100px;
+    height: 100px;
+}
+
+.post-text-container {
+    text-align: right;
+}
+.content-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);	
+    -ms-transform: translate(-50%, -50%); /* IE 9 */
+    -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */	
+}
