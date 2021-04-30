@@ -1,87 +1,39 @@
-import React from "react";
-import { Table, Tag, Space } from "antd";
+import React from 'react';
+import { Table } from 'reactstrap';
 
-const columns = [
-  {
-    title: "Event",
-    dataIndex: "Event",
-    key: "Event",
-    render: (text) => <a>{text}</a>,
-  },
-  {
-    title: "About",
-    dataIndex: "about",
-    key: "about",
-  },
-  {
-    title: "Date",
-    key: "tags",
-    dataIndex: "date",
-    render: (tags) => (
-      <>
-        {tags.map((tag) => {
-          let color = tag.length > 5 ? "geekblue" : "green";
-          if (tag === "loser") {
-            color = "volcano";
-          }
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
-  },
-  {
-    title: "Applies To",
-    key: "applies",
-    dataIndex: "applies",
-    render: (tags) => (
-      <>
-        {tags.map((tag) => {
-          let color = "red"
-          if (tag === "loser") {
-            color = "volcano";
-          }
-          return (
-            <Tag color={color} key={tag}>
-              {tag.toUpperCase()}
-            </Tag>
-          );
-        })}
-      </>
-    ),
-  },
-];
-
-const data = [
-  {
-    key: "1",
-    Event: "John Brown",
-    applies: ["Aaron Marsh","Aaron Marsh"],
-    about: "Sheeessssssh",
-    date: ["April 9, 2021"],
-  },
-  {
-    key: "2",
-    Event: "Jim Green",
-    applies: ["Aaron Marsh", "Aaron Marsh"],
-    about: "Sheeessssssh",
-    date: ["April 9, 2021"],
-  },
-  {
-    key: "3",
-    Event: "Joe Black",
-    applies: ["Aaron Marsh", "Aaron Marsh"],
-    about: "Sheeessssssh",
-    date: ["April 9, 2021"],
-  },
-];
-export default function table() {
+const Example = (props) => {
   return (
-    <div>
-      <Table columns={columns} dataSource={data} />
-    </div>
+    <Table striped>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </Table>
   );
 }
+
+export default Example;

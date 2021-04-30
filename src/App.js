@@ -3,6 +3,7 @@ import './App.css';
 import 'antd/dist/antd.css'
 import pkg from 'semantic-ui-react/package.json'
 import Home from './components/home/index'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
