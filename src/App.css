@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Tommy;
+  src: url(./Assets/Fonts/MADE\ TOMMY\ Bold_PERSONAL\ USE.otf);
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +40,14 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.title {
+  font-family: Fredoka;
+  color: black;
+  font-size: 50px;
+
+}
+.sub-title {
+  font-family: Tommy;
 }

@@ -2,6 +2,9 @@ import React from "react";
 import Header from "../header/index";
 import "./index.css";
 import Post from '../posts/index'
+import Landing from '../landing/index'
+import InfoButton from '../infoButton/infoButton'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,9 +18,12 @@ export default function Home() {
   return (
     <div>
       <Header />
+      {/* <InfoButton/> */}
       <Router>
-      <Route path='/' component={Post}/>
+        <switch>
+        <Route path='/' component={Landing}/>
       <Route path='/info' component={Post}/>
+        </switch>
       </Router>
     </div>
   );
